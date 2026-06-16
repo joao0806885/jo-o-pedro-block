@@ -1,1 +1,1 @@
-# jo-o-pedro-block
+# jo-o-pedro-blog
