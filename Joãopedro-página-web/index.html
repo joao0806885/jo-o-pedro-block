@@ -1,14 +1,383 @@
-<h1>Meu blog sobre jogos</h1>
-<p>vou compartilhar conhecimentoos sobre jogos</p>
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Blog - As melhores seleções da Copa do Mundo 2026</title>
+    <style>
+        :root {
+            color-scheme: dark;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #07111f, #1d4ed8);
+            color: #f8fafc;
+            line-height: 1.7;
+        }
+
+        header {
+            padding: 3rem 1.5rem 2rem;
+            text-align: center;
+            background: rgba(2, 6, 23, 0.55);
+            backdrop-filter: blur(8px);
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 4rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 1.25rem;
+            margin-bottom: 1.25rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+        }
+
+        .figures-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .figure-card {
+            background: rgba(15, 23, 42, 0.75);
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .figure-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .figure-card h3,
+        .figure-card p {
+            margin: 0.6rem 0.8rem 0;
+        }
+
+        .figure-card p {
+            padding-bottom: 0.8rem;
+            color: #cbd5e1;
+        }
+
+        .highlight {
+            background: rgba(255, 255, 255, 0.12);
+            border-left: 4px solid #fbbf24;
+            padding: 1rem 1.2rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+        }
+
+        .ranking {
+            display: grid;
+            gap: 0.7rem;
+            margin-top: 1rem;
+        }
+
+        .ranking-item {
+            display: flex;
+            justify-content: space-between;
+            background: rgba(2, 6, 23, 0.45);
+            padding: 0.7rem 0.9rem;
+            border-radius: 10px;
+        }
+
+        .timeline {
+            display: grid;
+            gap: 0.7rem;
+            margin-top: 1rem;
+        }
+
+        .timeline-item {
+            background: rgba(2, 6, 23, 0.45);
+            padding: 0.8rem 0.9rem;
+            border-radius: 10px;
+        }
+
+        .mini-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .mini-card {
+            background: rgba(2, 6, 23, 0.45);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .mini-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .mini-card p {
+            padding: 0.7rem 0.8rem;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .scoreboard {
+            display: grid;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .match-card {
+            background: rgba(2, 6, 23, 0.5);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 12px;
+            padding: 0.9rem 1rem;
+        }
+
+        .match-top {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+            margin-bottom: 0.5rem;
+        }
+
+        .match-teams {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #fbbf24;
+            color: #111827;
+            padding: 0.25rem 0.65rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        h1, h2, h3 {
+            margin-top: 0;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 0.8rem;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+        }
+
+        strong {
+            color: #fde68a;
+        }
+    </style>
 </head>
 <body>
-    
+    <header>
+        <p class="badge">Blog esportivo</p>
+        <h1>As melhores seleções da Copa do Mundo 2026</h1>
+        <p>Um olhar sobre os times que podem brilhar no maior torneio do planeta.</p>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Por que esse tema é tão interessante?</h2>
+            <p>A Copa do Mundo de 2026 promete ser uma das competições mais emocionantes dos últimos anos, com um formato ampliado e seleções mais equilibradas do que nunca. Entre os favoritos, alguns times se destacam pela experiência, talento jovem e força coletiva.</p>
+        </section>
+
+        <section class="card">
+            <h2>Figurinhas dos grandes destaques</h2>
+            <div class="figures-grid">
+                <article class="figure-card">
+                    <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=800&q=80" alt="Jogador de futebol em ação com a bola">
+                    <h3>Neymar</h3>
+                    <p>Brasil</p>
+                </article>
+                <article class="figure-card">
+                    <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80" alt="Jogador de futebol em campo com a bola">
+                    <h3>Messi</h3>
+                    <p>Argentina</p>
+                </article>
+                <article class="figure-card">
+                    <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=800&q=80" alt="Imagem de jogo de futebol em campo">
+                    <h3>Mbappé</h3>
+                    <p>França</p>
+                </article>
+                <article class="figure-card">
+                    <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=800&q=80" alt="Jogador de futebol chutando a bola">
+                    <h3>Rodri</h3>
+                    <p>Espanha</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="grid">
+            <article class="card">
+                <h3>Brasil</h3>
+                <p>O time canarinho segue sendo uma das grandes forças da competição, com um elenco cheio de craques e muita tradição.</p>
+                <ul>
+                    <li>Força ofensiva impressionante</li>
+                    <li>Experiência em grandes decisões</li>
+                    <li>Potencial para surpreender em qualquer fase</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h3>Argentina</h3>
+                <p>Campeã recente e cheia de personalidade, a Argentina entra como uma das favoritas com muita confiança e qualidade técnica.</p>
+                <ul>
+                    <li>Equipe muito bem montada</li>
+                    <li>Grande presença de jogadores decisivos</li>
+                    <li>Forte espírito de campeão</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h3>França</h3>
+                <p>A França tem um elenco profundo e jovem, o que faz dela uma das seleções mais perigosas do torneio.</p>
+                <ul>
+                    <li>Profundidade de banco</li>
+                    <li>Velocidade e técnica elevadas</li>
+                    <li>Capacidade de controlar jogos</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h3>Espanha</h3>
+                <p>A Espanha destaca-se pela organização tática e pela habilidade de dominar a posse de bola com muita inteligência.</p>
+                <ul>
+                    <li>Jogo coletivo muito forte</li>
+                    <li>Técnica superior em muitos momentos</li>
+                    <li>Grande equilíbrio entre defesa e ataque</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="card">
+            <h2>Minha aposta para o título</h2>
+            <p>Se eu tivesse que escolher uma seleção para levantar a taça em 2026, eu apostaria no <strong>Brasil</strong> pela mistura de talento, tradição e coragem em momentos decisivos. Ainda assim, a competição promete muita disputa, e times como <strong>Argentina</strong>, <strong>França</strong> e <strong>Espanha</strong> podem roubar a atenção a qualquer momento.</p>
+        </section>
+
+        <section class="card">
+            <h2>Ranking rápido dos favoritos</h2>
+            <div class="ranking">
+                <div class="ranking-item"><span>1. Brasil</span><span>Melhor ataque</span></div>
+                <div class="ranking-item"><span>2. Argentina</span><span>Experiência e estrela</span></div>
+                <div class="ranking-item"><span>3. França</span><span>Elenco profundo</span></div>
+                <div class="ranking-item"><span>4. Espanha</span><span>Jogo coletivo forte</span></div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Prévia de um grande duelo</h2>
+            <p>Um dos confrontos mais esperados da competição pode ser entre Brasil e Argentina, pois reúne história, técnica e muita emoção para os torcedores.</p>
+            <div class="highlight">
+                <strong>Frase do dia:</strong> “A Copa do Mundo é o lugar onde a história do futebol se escreve a cada partida.”
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Jogadores para acompanhar</h2>
+            <ul>
+                <li>Vinícius Júnior, por sua velocidade e impacto no ataque.</li>
+                <li>Lautaro Martínez, pela finalização e presença na área.</li>
+                <li>Jude Bellingham, por sua inteligência e liderança em campo.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Por que vale assistir?</h2>
+            <div class="timeline">
+                <div class="timeline-item"><strong>Grupo inicial:</strong> seleções grandes se enfrentam logo no começo.</div>
+                <div class="timeline-item"><strong>Fase decisiva:</strong> a pressão aumenta e os jogos ficam ainda mais emocionantes.</div>
+                <div class="timeline-item"><strong>Final:</strong> o maior palco do futebol pode reunir enormes protagonistas.</div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Pequenas curiosidades da Copa</h2>
+            <div class="mini-gallery">
+                <article class="mini-card">
+                    <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=800&q=80" alt="Campo de futebol com bola">
+                    <p>A Copa reúne seleções de diferentes continentes e culturas.</p>
+                </article>
+                <article class="mini-card">
+                    <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=800&q=80" alt="Jogador celebrando no futebol">
+                    <p>Momentos de emoção e viradas históricas marcam cada edição.</p>
+                </article>
+                <article class="mini-card">
+                    <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=800&q=80" alt="Partida de futebol em campo">
+                    <p>Os torcedores tornam o torneio ainda mais especial com sua paixão.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Próximos jogos do Brasil</h2>
+            <div class="scoreboard">
+                <div class="match-card">
+                    <div class="match-top">
+                        <span>Amistoso</span>
+                        <span>15/09</span>
+                    </div>
+                    <div class="match-teams">
+                        <span>Brasil</span>
+                        <span>vs</span>
+                        <span>England</span>
+                    </div>
+                </div>
+                <div class="match-card">
+                    <div class="match-top">
+                        <span>Eliminatórias</span>
+                        <span>20/09</span>
+                    </div>
+                    <div class="match-teams">
+                        <span>Brasil</span>
+                        <span>vs</span>
+                        <span>Uruguai</span>
+                    </div>
+                </div>
+                <div class="match-card">
+                    <div class="match-top">
+                        <span>Eliminatórias</span>
+                        <span>25/09</span>
+                    </div>
+                    <div class="match-teams">
+                        <span>Colômbia</span>
+                        <span>vs</span>
+                        <span>Brasil</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
